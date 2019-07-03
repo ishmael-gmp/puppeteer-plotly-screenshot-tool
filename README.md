@@ -1,0 +1,2 @@
+
+# plotly-screenshot-tool

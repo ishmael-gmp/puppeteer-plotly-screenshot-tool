@@ -1,0 +1,34 @@
+{
+  "name": "plotly-screenshot-tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "riteway  'dist/**/*.spec.js'",
+    "build": "babel src --copy-files --out-dir dist",
+    "build:dev": "babel src --copy-files --out-dir dist -w",
+    "prepublishOnly": "npm run build",
+    "watch": "watch 'clear && npm run build:dev && npm run -s test | tap-nirvana' src"
+  },
+  "author": "ishmael.ahmed@greenmountainpower.com",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "babel-loader": "^8.0.6",
+    "pixelmatch": "^5.0.2",
+    "pngjs": "^3.4.0",
+    "puppeteer": "^1.18.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "riteway": "^6.0.3",
+    "tap-nirvana": "^1.1.0",
+    "watch": "^1.0.2",
+    "webpack": "^4.35.2"
+  }
+}
