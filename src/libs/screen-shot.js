@@ -1,4 +1,5 @@
 import path from 'path';
+import {URL} from 'url';
 
 /**
  * @param {Object} browser is a promise of puppeteer browser instance
@@ -38,7 +39,7 @@ async function _screenShot(browser, uri = path.join(__dirname, '/resources/asset
         }
         return await page.screenshot({
             encoding: 'binary',
-            path:imgpath,
+            path: imgpath,
             clip
         });
     } catch (error) {
