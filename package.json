@@ -4,7 +4,7 @@
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "riteway  'dist/**/*.spec.js'",
+    "test": "riteway  './dist/**/*.spec.js'",
     "build": "babel src --copy-files --out-dir dist",
     "build:dev": "babel src --copy-files --out-dir dist -w",
     "prepublishOnly": "npm run build",
