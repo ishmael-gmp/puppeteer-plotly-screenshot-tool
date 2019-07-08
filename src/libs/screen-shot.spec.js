@@ -49,7 +49,7 @@ screenshot(browser, location, '#chart', 0, `${path.join(__dirname, 'test.png')}`
         assert({
             given,
             should: 'have the same number of pixels',
-            expected: 1262,
+            expected: 0,
             actual: numDiffPixels,
         })
     })

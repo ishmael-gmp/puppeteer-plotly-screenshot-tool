@@ -10,7 +10,12 @@ const _getPage = async () => {
 }
 const _getBrowser = async () => {
     try {
-        return await puppeteer.launch();
+        return await puppeteer.launch({
+            defaultViewport: {
+                width:800,
+                height:600
+            },
+        });
     } catch (e) {
         console.error(e)
     }
