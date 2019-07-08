@@ -14,7 +14,7 @@ const sl = encodeURI(JSON.stringify(layout))
 const plots = encodeURI(JSON.stringify([trace1, trace2,]))
 
 const browser = getBrowser();
-const location = `file://${path.join(__dirname, '/resources/assets/index.html')}?p=${plots}&l=${sl}`
+const location = `file://${path.join(__dirname, '/resources/assets/index.html')}?plots=${plots}&layout=${sl}`
 
 
 screenshot(browser, location, '#chart', 0, `${path.join(__dirname, 'test.png')}`).then(() => {

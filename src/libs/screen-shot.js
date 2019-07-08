@@ -1,5 +1,5 @@
 import path from 'path';
-import {URL} from 'url';
+import { URL } from 'url';
 
 /**
  * @param {Object} browser is a promise of puppeteer browser instance
@@ -20,7 +20,7 @@ async function _screenShot(browser, uri = path.join(__dirname, '/resources/asset
     try {
         const page = await seed.newPage();
         console.log('trying..... to get a page')
-        await page.goto(`${url}`, { waitUntil: 'networkidle2' });
+        await page.goto(`${url}`, { waitUntil: 'networkidle0' });
         console.log('trying..... to go to a url')
         const rect = await page.evaluate((selector) => {
             const element = document.querySelector(selector);
@@ -37,6 +37,7 @@ async function _screenShot(browser, uri = path.join(__dirname, '/resources/asset
             width: rect.width - imageWidthModifier,
             height: rect.height + padding * 2,
         }
+        setTimeout(()=>{},5000)
         return await page.screenshot({
             encoding: 'binary',
             path: imgpath,

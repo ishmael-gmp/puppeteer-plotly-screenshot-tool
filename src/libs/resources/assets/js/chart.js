@@ -1,6 +1,6 @@
 (function () {
     const params = (new URL(document.location)).searchParams;
-    let p = JSON.parse(params.get('p'));
+    let plots = JSON.parse(params.get('plots'));
     let layout = JSON.parse(params.get('layout'));
-    window.Plotly.newPlot('chart', [...p], layout);
+    window.Plotly.newPlot('chart', [...plots], layout);
 }(window));

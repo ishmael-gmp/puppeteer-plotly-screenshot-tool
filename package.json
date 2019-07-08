@@ -8,7 +8,7 @@
     "build": "babel src --copy-files --out-dir dist",
     "build:dev": "babel src --copy-files --out-dir dist -w",
     "prepublishOnly": "npm run build",
-    "watch": "watch 'clear && npm run build:dev && npm run -s test | tap-nirvana' src"
+    "watch": "watch 'clear && npm run build && npm run -s test | tap-nirvana' src"
   },
   "author": "ishmael.ahmed@greenmountainpower.com",
   "license": "ISC",
